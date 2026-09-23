@@ -56,7 +56,8 @@ def build_parser() -> argparse.ArgumentParser:
 
     scan_parser = subparsers.add_parser("scan", help="Scan a Markdown document for issues.")
     scan_parser.add_argument(
-        "--input",
+        "input",
+        nargs="?",
         type=Path,
         help="Markdown file to analyze. Defaults to stdin.",
     )
@@ -69,7 +70,8 @@ def build_parser() -> argparse.ArgumentParser:
 
     norm_parser = subparsers.add_parser("normalize", help="Normalize heading casing and spacing.")
     norm_parser.add_argument(
-        "--input",
+        "input",
+        nargs="?",
         type=Path,
         help="Markdown file to analyze. Defaults to stdin.",
     )

@@ -39,5 +39,5 @@ def test_normalize_adjacent_level() -> None:
 def test_main_scan_stdout(tmp_path: Path) -> None:
     target = tmp_path / "doc.md"
     target.write_text("# Title\n## Intro\n", encoding="utf-8")
-    rc = main(["scan", "--input", str(target)])
+    rc = main(["scan", str(target)])
     assert rc == 0
